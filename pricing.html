@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing </title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+        :root {
+            --primary-color: #111317;
+            --primary-color-light: #1f2125;
+            --primary-color-extra-light: #35373b;
+            --secondary-color: #f9ac54;
+            --secondary-color-dark: #d79447;
+            --text-light: #d1d5db;
+            --white: #ffffff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--primary-color);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .nav__logo {
+            max-width: 150px;
+        }
+
+        img {
+            width: 100%;
+            display: flex;
+        }
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .link a {
+            position: relative;
+            padding-bottom: 0.75rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .link a::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: 0;
+            background-color: var(--secondary-color);
+            transition: 0.3s;
+        }
+
+        .link a:hover::after {
+            width: 100%;
+        }
+
+        .price__grid {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .price__card {
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--primary-color-light);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .price__card:hover {
+            background-color: var(--primary-color-extra-light);
+            border-color: var(--secondary-color);
+        }
+
+        .price__card__content {
+            flex: 1;
+            margin-bottom: 2rem;
+        }
+
+        .price__card h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--white);
+        }
+
+        .price__card h3 {
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--white);
+            border-bottom: 2px solid var(--white);
+        }
+
+        .price__card p {
+            margin-bottom: 0.75rem;
+            color: var(--white);
+        }
+
+        .price__card p i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .price__btn {
+            color: var(--secondary-color);
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .price__btn:hover {
+            color: var(--white);
+            background-color: var(--secondary-color);
+        }
+
+        .section__container {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 5rem 1rem;
+        }
+
+        .section__header {
+            margin-bottom: 1rem;
+            font-size: 2.25rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .section__subheader {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            color: var(--white);
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__logo">
+            <img src="/img/logo.img.png" alt="logo">
+        </div>
+        <ul class="nav__links">
+            <li class="link"><a href="/index.html">Home</a></li>
+            <li class="link"><a href="/pricing.html">Pricing</a></li>
+            <li class="link"><a href="#">Service</a></li>
+            <li class="link"><a href="#">About</a></li>
+            <li class="link"><a href="#">Community</a></li>
+        </ul>
+        <button class="btn">Join Now</button>
+    </nav>
+    <section class="section__container price__container">
+        <h2 class="section__header">OUR PRICING PLAN</h2>
+        <p class="section__subheader">
+            Our pricing plan comes with various membership tiers, each tailored to
+            cater to different preferences and fitness aspirations.
+        </p>
+        <div class="price__grid">
+            <div class="price__card">
+                <div class="price__card__content">
+                    <h4>Basic Plan</h4>
+                    <h3>$16</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Smart workout plan
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        At home workouts
+                    </p>
+                </div>
+                <button class="btn price__btn">Join Now</button>
+            </div>
+            <div class="price__card">
+                <div class="price__card__content">
+                    <h4>Weekly Plan</h4>
+                    <h3>$25</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        PRO Gyms
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Smart workout plan
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        At home workouts
+                    </p>
+                </div>
+                <button class="btn price__btn">Join Now</button>
+            </div>
+            <div class="price__card">
+                <div class="price__card__content">
+                    <h4>Monthly Plan</h4>
+                    <h3>$45</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        ELITE Gyms & Classes
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        PRO Gyms
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Smart workout plan
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        At home workouts
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Personal Training
+                    </p>
+                </div>
+                <button class="btn price__btn">Join Now</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
